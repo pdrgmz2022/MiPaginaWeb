@@ -1,0 +1,637 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+header{
+    display: flex; 
+    position:sticky; /* position sticky y top 0 hacen que se fije el header*/
+    top: 0;
+    background-color: black;
+    justify-content:space-between;
+    align-items:center;
+   
+}
+
+header ul{
+    display: flex;  
+}  
+
+header li{
+    margin: 0.5rem;
+    border-radius: 30%;
+    background-color: brown;
+    padding: 0.7rem;
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+
+
+a {
+    text-decoration: none;
+    color:white
+    
+}
+
+a:hover{
+    color:rgb(0, 255, 34);
+    cursor: pointer; /* pone el cursor de la manito*/
+}
+
+h1{
+    color: rgb(42, 165, 83);
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+/*
+@keyframes cambiacolor{
+    from{
+        color: yellow;
+    }
+    to{
+        color: brown;
+    }
+
+}
+*/
+
+
+@keyframes cambiacolor{
+    0%{
+        color: yellow;
+    }
+    50%{
+        color: brown;
+        
+    }
+    100%{
+        color: green;
+    }
+
+}
+
+.animacion{
+    
+    animation: cambiacolor 1s ease infinite alternate;
+}
+
+
+#inicio{
+    background-image: url(img/fondo.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+main {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /*background-color: #EFEFEF;*/
+     background-color: #000000;
+} 
+
+.slide-container {
+    /* max-width: 1120px;*/
+    width: 100%; 
+    max-width: 50%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px; 
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: midnightblue;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: midnightblue;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+/* para las imagenes de acerca de nosotros*/
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0px solid midnightblue;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: midnightblue;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: blue;
+}
+
+.swiper-navBtn {
+    color: midnightblue;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: blue;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: midnightblue;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: blue;
+}
+
+/* @media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
+} */
+
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    background-image: url(img/fondo2.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#producto{
+    background-image: url(img/fondo5.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contacto{
+    background-image: url(img/fondo4.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#registro{
+    background-image: url(img/fondo5.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*css para servicios.html*/
+.services-main{
+    background-image: url(img/fondo3.jpg);
+    /* height: 100vh; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+}
+
+.services-title .h1-services{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 42px;
+    color: #000;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.services-title .h1-services::after{
+    content:"";
+    height: 15px;
+    width: 230px;
+    display: block;
+    margin: auto;
+}
+
+.services{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+}
+/* configuracion de las tarjetas de servicios*/
+.services-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: #efefef;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ /* texto dentro de las tarjetas de servicios */
+.services ul li{
+    justify-content: left;
+    text-align: left;
+    margin: 10px ;
+}
+.services-card:hover{
+    background-color: lightgray;
+    transition: 0.4s ease;
+}
+
+.services-card .services-icon{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.services-card .h2-services{
+    font-size: 28px;
+    color: #c94f4f;
+    margin-bottom: 20px;
+}
+
+.services-card p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #5e5e5e;
+}
+
+.services-button{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: midnightblue;
+    padding: 8px 12px;
+    border-radius: 5xp;
+    letter-spacing: 1px;
+}
+
+.services-button:hover{
+    background-color: blue;
+    transition: 0.4s ease;
+    color: white;
+}
+
+@media screen and (max-width:940px){
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services-card{
+        width: 85%;
+        display: flex;
+        margin: 20px 0px;
+    }
+}
+/*fin*/
+
+footer{
+    position: sticky; /* position sticky y bottom 0 hacen que se fije el footer*/
+    bottom: 0;
+    background-color: black;
+    height: 15vh;
+}
+
+#iconos{
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: brown;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer li{
+    margin: 0.5rem;
+    border-radius: 30%;
+    background-color: brown;
+    padding: 0.7rem;
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: 40px;
+    color: white;
+    
+}
+
+/* para que se mueva el boton del celular */
+.tel:hover{
+    cursor: pointer;
+    animation:rotateIn ; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s
+}
+/* responsive  puntos de corte */
+
+
+@media screen and(max-width:640px){
+    
+}
+
+@media screen and(max-width:1024px) and (min-width:640px){
+    
+}
+@media screen and(min-width:1024px){
+    
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
+}
+/* formulario de registro */
+
+.formregistro{
+    width: 450px;
+    background: #24303c;
+    padding: 40px;
+    margin:auto;
+    /*margin-top: 4px;*/
+    border-radius: 14px;
+    box-sizing: border-box;
+    color: white;
+    box-shadow: 7px 13px 47px #000;
+    height: 100%;
+}
+.formregistro h4{
+    font-size: 22px;
+    margin-bottom: 22px;
+
+}
+.controles{
+    width: 95%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid ;
+    font-size: 18px;
+
+}
+
+.formregistro p{
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+
+}
+.formregistro a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.formregistro a:hover{
+    color: white;
+    text-decoration:underline;
+    
+}
+.enviar{
+    width: 100%;
+    padding: 12px;
+    color:white;
+    margin: 16px 0;
+    font-size: 16px;
+    background-color: rgb(48, 48, 245);
+
+}
+.enviar:hover{
+    text-decoration: underline;
+    
+}
+
+/* Formulario de contacto  */
+.conta{
+    /*background-color: black;*/
+	color: white;
+    width: 450px;
+	background-color: #009999;
+	padding: 40px; /*para no pegar el borde con el contenido */
+	margin: auto; /* para centrarlo  */
+	/*margin-top: 2px;/*margen de arriba */
+	border-radius: 14px;/* separa las cajas de texto */
+	font-family: 'calibri';
+	color: white;
+    box-sizing: border-box;
+	box-shadow: 7px 13px 37px #000000; /*le agrega una sombra */
+    height: 100%;
+}
+.conta h4{
+	font-size: 30px;
+	margin-bottom: 30px; /*separa el titulo */
+}
+
+.conta .boton2 {
+	width: 100%;
+	background: black;/* color del boton enviar */
+	/*border:none;*/	
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+
+}
+.controles2{
+	width: 100%;
+	background:#ffffff ;/* color de fondo de la caja de texto */
+	padding: 10px; /* grosor del borde */
+	border-radius: 4px;
+	margin-bottom: 16px;/* separacion de las cajas de texto */
+	/*border: 1px solid #1f53c5;*/
+	font-family: 'calibri';
+	font-size: 18px;
+	color: black;/* color de la letra de las cajas */
+}
+.consulta{
+	size: 100%;
+}
+
+
+/* pagina principal   desplazamiento de imagenes  */
+
+.slider{
+    width: 100%;
+    margin:auto;
+    overflow: hidden;
+
+}
+
+.slider ul {
+    padding: 0;
+    display: flex;
+    width: 250%; /* tamaño de los slider*/
+    animation: mover 20s infinite alternate;
+    
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+
+}
+.slider img{
+    width: 100%;
+    height: 100vh;
+}
+
+/* pagina de productos */
+
+.sliderPro{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.sliderPro ul {
+    padding: 0;
+    display: flex;
+    width: 250%; /* tamaño de los slider*/
+    animation: mover 20s infinite alternate;
+    
+}
+
+.sliderPro li {
+    list-style: none;
+    width: 100%;
+  
+
+}
+.sliderPro img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+
+@keyframes mover {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}   
+
+}
